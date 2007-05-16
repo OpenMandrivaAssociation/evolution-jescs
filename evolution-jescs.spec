@@ -10,9 +10,9 @@ Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.b
 URL: 		http://cvs.gnome.org/viewcvs/evolution-jescs/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 BuildRequires:	evolution-devel 
+#gw remove this once the evolution-devel package requires it
+BuildRequires:  libgtkhtml-3.14-devel 
 BuildRequires:  libsoup-devel 
-BuildRequires:  libgtkhtml-3.8-devel 
-BuildRequires:  evolution-data-server-devel
 BuildRequires:	perl-XML-Parser
 BuildRequires:  mono-devel
 
