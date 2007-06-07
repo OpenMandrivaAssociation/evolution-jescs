@@ -1,17 +1,16 @@
-%define major	2.10
+%define major	2.12
 
 Name:		evolution-jescs
 Summary:	Sun Java Enterprise System Calendar Server connector for Evolution
-Version:	2.10.0
+Version:	2.11.0
 Release:	%mkrel 1
 License: 	GPL
 Group:		Networking/Mail
 Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
+Patch: evolution-jescs-2.11.0-evo2.12.patch
 URL: 		http://cvs.gnome.org/viewcvs/evolution-jescs/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-root
-BuildRequires:	evolution-devel 
-#gw remove this once the evolution-devel package requires it
-BuildRequires:  libgtkhtml-3.14-devel libgnomeprintui-devel
+BuildRequires:	evolution-devel >= 2.11
 BuildRequires:  libsoup-devel 
 BuildRequires:	perl-XML-Parser
 BuildRequires:  mono-devel
@@ -24,6 +23,8 @@ This connector supports the WCAP (Web Calendar Access Protocol) 2.0, 3.0, 3.1.
 
 %prep
 %setup -q
+%patch
+autoconf
 
 %build
 
