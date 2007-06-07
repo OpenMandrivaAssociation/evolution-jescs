@@ -23,7 +23,7 @@ This connector supports the WCAP (Web Calendar Access Protocol) 2.0, 3.0, 3.1.
 
 %prep
 %setup -q
-%patch
+%patch -p1
 autoconf
 
 %build
