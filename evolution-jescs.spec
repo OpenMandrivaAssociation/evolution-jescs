@@ -8,7 +8,6 @@ License: 	GPL
 Group:		Networking/Mail
 Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
 URL: 		http://cvs.gnome.org/viewcvs/evolution-jescs/
-BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 BuildRequires:	evolution-devel >= 2.11
 BuildRequires:  libsoup-devel 
 BuildRequires:	perl-XML-Parser
