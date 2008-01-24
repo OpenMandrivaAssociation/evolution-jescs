@@ -3,8 +3,8 @@
 Name:		evolution-jescs
 Summary:	Sun Java Enterprise System Calendar Server connector for Evolution
 Version:	2.21.1
-Release:	%mkrel 1
-License: 	GPL
+Release:	%mkrel 2
+License: 	GPLv2+
 Group:		Networking/Mail
 Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
 URL: 		http://cvs.gnome.org/viewcvs/evolution-jescs/
@@ -51,5 +51,3 @@ rm -f $RPM_BUILD_ROOT%{_libdir}/evolution-data-server-*/*/*.a
 %{_libdir}/bonobo/servers/*.server
 %{_datadir}/%{name}
 %{_datadir}/evolution/*/images/*
-
-
