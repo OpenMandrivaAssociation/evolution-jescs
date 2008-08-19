@@ -11,7 +11,7 @@ URL: 		http://cvs.gnome.org/viewcvs/evolution-jescs/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 BuildRequires:	evolution-devel >= 2.11
 BuildRequires:  libsoup-devel 
-BuildRequires:	perl-XML-Parser
+BuildRequires:	intltool
 BuildRequires:  mono-devel
 
 %description
