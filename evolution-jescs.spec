@@ -2,8 +2,8 @@
 
 Name:		evolution-jescs
 Summary:	Sun Java Enterprise System Calendar Server connector for Evolution
-Version:	2.23.0
-Release:	%mkrel 2
+Version:	2.23.1
+Release:	%mkrel 1
 License: 	GPLv2+
 Group:		Networking/Mail
 Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
@@ -43,6 +43,13 @@ rm -f $RPM_BUILD_ROOT%{_libdir}/evolution-data-server-*/*/*.a
 %clean
 [ -n "$RPM_BUILD_ROOT" -a "$RPM_BUILD_ROOT" != / ] && rm -rf $RPM_BUILD_ROOT
 
+%if %mdvver < 200900
+%post
+%update_icon_cache hicolor
+%postun
+%clean_icon_cache hicolor
+%endif
+
 %files -f %{name}-%{major}.lang
 %defattr(-, root, root)
 %doc AUTHORS COPYING ChangeLog 
@@ -50,4 +57,5 @@ rm -f $RPM_BUILD_ROOT%{_libdir}/evolution-data-server-*/*/*.a
 %{_libdir}/evolution/*/%{name}
 %{_libdir}/bonobo/servers/*.server
 %{_datadir}/%{name}
-%{_datadir}/evolution/*/images/*
+%_datadir/evolution/*/icons/hicolor/*/*/*
+%_datadir/icons/hicolor/*/apps/*
