@@ -2,7 +2,7 @@
 
 Name:		evolution-jescs
 Summary:	Sun Java Enterprise System Calendar Server connector for Evolution
-Version:	2.25.2
+Version:	2.26.0
 Release:	%mkrel 1
 License: 	GPLv2+
 Group:		Networking/Mail
