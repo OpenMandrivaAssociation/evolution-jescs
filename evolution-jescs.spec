@@ -1,9 +1,9 @@
-%define major	2.26
+%define major	2.28
 
 Name:		evolution-jescs
 Summary:	Sun Java Enterprise System Calendar Server connector for Evolution
-Version:	2.26.0
-Release:	%mkrel 2
+Version:	2.27.0
+Release:	%mkrel 1
 License: 	GPLv2+
 Group:		Networking/Mail
 Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
