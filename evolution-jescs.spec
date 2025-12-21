@@ -9,6 +9,11 @@ Group:		Networking/Mail
 Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
 URL: 		https://cvs.gnome.org/viewcvs/evolution-jescs/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-root
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	evolution-devel >= 2.11
 BuildRequires:  libsoup-devel 
 BuildRequires:	intltool
